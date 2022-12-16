@@ -1,8 +1,14 @@
+import { ContactButton, Navbar } from './components'
+import AppRouter from './Router/AppRouter'
+import { MyContainer } from './styled-components/'
 
-function Portfolio() {
-
+function Portfolio (): JSX.Element {
   return (
-    <h1>HALLO</h1>
+    <MyContainer>
+      <Navbar />
+      <AppRouter />
+      <ContactButton/>
+    </MyContainer>
   )
 }
 

@@ -1,8 +1,9 @@
 :root {
-  --bg-color: hsl(280, 6%, 10%);
-  --color: rgb(248, 248, 248);
+  --black: #1a171c;
+  --white: #f8f8f8;
   --gray: #acacac;
-  --red: rgb(233, 50, 47);
+  --red: #e9322f;
+  --side-padding: 10rem;
 }
 
 *,
@@ -19,11 +20,51 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: var(--bg-color);
-  color: var(--color);
+  font-family: 'Teko', 'Lato', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--red) var(--black);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 10px;
+  border: 3px solid var(--black);
+}
+
+::-moz-selection {
+  color: var(--black);
+  background: var(--red);
+}
+::selection {
+  color: var(--black);
+  background: var(--red);
+}
+
+/* dibuja el texto seleccionado en un parrafo de color blanco y negro*/
+p::-moz-selection {
+  color: var(--black);
+  background: var(--red);
+}
+p::selection {
+  color: var(--black);
+  background: var(--red);
 }
